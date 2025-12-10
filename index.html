@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متتبع التقدم الدراسي</title>
+    
+    <!-- Google Fonts - Tajawal for Arabic support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <h1>متتبع التقدم الدراسي</h1>
+            </div>
+            <p class="header-subtitle">تتبع تقدمك في المواد الجامعية بسهولة</p>
+            
+            <!-- Global Stats -->
+            <div class="global-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalCompleted">0</span>
+                    <span class="stat-label">مكتمل</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalRemaining">200</span>
+                    <span class="stat-label">متبقي</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalPercentage">0%</span>
+                    <span class="stat-label">نسبة الإنجاز</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+        
+        <!-- ========== SECOND YEAR COURSES SECTION ========== -->
+        <section class="section" id="second-year-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon">🎓</span>
+                    مواد السنة الثانية
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="courses-grid">
+                
+                <!-- Course 1: رياضيات متقطعة -->
+                <div class="course-card" data-course="discrete-math">
+                    <div class="course-header">
+                        <h3 class="course-title">رياضيات متقطعة</h3>
+                        <button class="reset-btn" data-course="discrete-math" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-course="discrete-math"></div>
+                        </div>
+                        <span class="progress-text" data-course="discrete-math">0%</span>
+                    </div>
+                    
+                    <!-- Lectures Group -->
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="discrete-math" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sessions Group -->
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="discrete-math" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2: دارات كهربائية -->
+                <div class="course-card" data-course="electrical-circuits">
+                    <div class="course-header">
+                        <h3 class="course-title">دارات كهربائية</h3>
+                        <button class="reset-btn" data-course="electrical-circuits" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-course="electrical-circuits"></div>
+                        </div>
+                        <span class="progress-text" data-course="electrical-circuits">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="electrical-circuits" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="electrical-circuits" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3: تحليل 3 -->
+                <div class="course-card" data-course="calculus-3">
+                    <div class="course-header">
+                        <h3 class="course-title">تحليل 3</h3>
+                        <button class="reset-btn" data-course="calculus-3" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-course="calculus-3"></div>
+                        </div>
+                        <span class="progress-text" data-course="calculus-3">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="calculus-3" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="calculus-3" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4: برمجة متقدمة 1 -->
+                <div class="course-card" data-course="advanced-programming-1">
+                    <div class="course-header">
+                        <h3 class="course-title">برمجة متقدمة 1</h3>
+                        <button class="reset-btn" data-course="advanced-programming-1" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-course="advanced-programming-1"></div>
+                        </div>
+                        <span class="progress-text" data-course="advanced-programming-1">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="advanced-programming-1" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="advanced-programming-1" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5: احصاء واحتمالات -->
+                <div class="course-card" data-course="statistics-probability">
+                    <div class="course-header">
+                        <h3 class="course-title">احصاء واحتمالات</h3>
+                        <button class="reset-btn" data-course="statistics-probability" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-course="statistics-probability"></div>
+                        </div>
+                        <span class="progress-text" data-course="statistics-probability">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="statistics-probability" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="statistics-probability" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== CARRY COURSES SECTION ========== -->
+        <section class="section carry-section" id="carry-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon">📌</span>
+                    المواد المحمولة (السنة الأولى)
+                </h2>
+                <div class="section-divider carry-divider"></div>
+            </div>
+            
+            <div class="courses-grid">
+                
+                <!-- Carry Course 1: جبر لا خطي -->
+                <div class="course-card carry-card" data-course="linear-algebra">
+                    <div class="course-header">
+                        <h3 class="course-title">جبر لا خطي</h3>
+                        <button class="reset-btn" data-course="linear-algebra" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill carry-progress" data-course="linear-algebra"></div>
+                        </div>
+                        <span class="progress-text" data-course="linear-algebra">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="linear-algebra" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="linear-algebra" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carry Course 2: الفيزياء الكهربائية -->
+                <div class="course-card carry-card" data-course="electrical-physics">
+                    <div class="course-header">
+                        <h3 class="course-title">الفيزياء الكهربائية</h3>
+                        <button class="reset-btn" data-course="electrical-physics" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill carry-progress" data-course="electrical-physics"></div>
+                        </div>
+                        <span class="progress-text" data-course="electrical-physics">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="electrical-physics" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="electrical-physics" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carry Course 3: برمجة 1 -->
+                <div class="course-card carry-card" data-course="programming-1">
+                    <div class="course-header">
+                        <h3 class="course-title">برمجة 1</h3>
+                        <button class="reset-btn" data-course="programming-1" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill carry-progress" data-course="programming-1"></div>
+                        </div>
+                        <span class="progress-text" data-course="programming-1">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="programming-1" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="programming-1" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carry Course 4: مبادئ عمل الحاسوب -->
+                <div class="course-card carry-card" data-course="computer-principles">
+                    <div class="course-header">
+                        <h3 class="course-title">مبادئ عمل الحاسوب</h3>
+                        <button class="reset-btn" data-course="computer-principles" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill carry-progress" data-course="computer-principles"></div>
+                        </div>
+                        <span class="progress-text" data-course="computer-principles">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="computer-principles" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="computer-principles" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== ENGLISH COURSE SECTION ========== -->
+        <section class="section english-section" id="english-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon">🌐</span>
+                    اللغة الإنكليزية
+                </h2>
+                <div class="section-divider english-divider"></div>
+            </div>
+            
+            <div class="courses-grid single-course">
+                
+                <!-- English Course -->
+                <div class="course-card english-card" data-course="english-3">
+                    <div class="course-header">
+                        <h3 class="course-title">اللغة الإنكليزية 3</h3>
+                        <button class="reset-btn" data-course="english-3" title="إعادة تعيين">
+                            <span class="reset-icon">↺</span>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill english-progress" data-course="english-3"></div>
+                        </div>
+                        <span class="progress-text" data-course="english-3">0%</span>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">المحاضرات</h4>
+                        <div class="squares-container" data-course="english-3" data-type="lectures">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="squares-group">
+                        <h4 class="group-label">الجلسات</h4>
+                        <div class="squares-container" data-course="english-3" data-type="sessions">
+                            <div class="square" data-index="0"><span>1</span></div>
+                            <div class="square" data-index="1"><span>2</span></div>
+                            <div class="square" data-index="2"><span>3</span></div>
+                            <div class="square" data-index="3"><span>4</span></div>
+                            <div class="square" data-index="4"><span>5</span></div>
+                            <div class="square" data-index="5"><span>6</span></div>
+                            <div class="square" data-index="6"><span>7</span></div>
+                            <div class="square" data-index="7"><span>8</span></div>
+                            <div class="square" data-index="8"><span>9</span></div>
+                            <div class="square" data-index="9"><span>10</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>صُمم بـ <span class="heart">❤️</span> للطلاب</p>
+            <p class="footer-note">جميع البيانات محفوظة محلياً في متصفحك</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
